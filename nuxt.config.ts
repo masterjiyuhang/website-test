@@ -9,7 +9,14 @@ export default defineNuxtConfig({
 
   extends: ['./tailwindcss-layer'],
 
-  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/icon'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/icon',
+
+    '@nuxtjs/fontaine', // 优化 Web 字体加载
+    '@nuxtjs/critters', // 优化关键 CSS 加载
+  ],
 
   eslint: {
     // options here
@@ -26,5 +33,15 @@ export default defineNuxtConfig({
 
   icon: {
     size: '16px',
+  },
+
+  fontMetrics: {
+    fonts: ['Inter', 'Kalam'],
+  },
+
+  critters: {
+    config: {
+      preload: 'swap',
+    },
   },
 })
