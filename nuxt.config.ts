@@ -7,13 +7,20 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  extends: [
-    './tailwindcss-layer',
-  ],
+  extends: ['./tailwindcss-layer'],
 
-  modules: ['@nuxt/eslint'],
+  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss'],
 
   eslint: {
     // options here
-  }
+  },
+  tailwindcss: {
+    cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'first' }],
+    configPath: 'tailwind.config',
+    exposeConfig: {
+      level: 2,
+    },
+    config: {},
+    viewer: true,
+  },
 })
