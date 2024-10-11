@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 
   extends: ['./tailwindcss-layer'],
 
-  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss'],
+  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/icon'],
 
   eslint: {
     // options here
@@ -22,5 +22,9 @@ export default defineNuxtConfig({
     },
     config: {},
     viewer: true,
+  },
+
+  icon: {
+    size: '16px',
   },
 })
