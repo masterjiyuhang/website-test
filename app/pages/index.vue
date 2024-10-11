@@ -6,8 +6,10 @@
     <button class="border p-2" @click="store.increment">add count</button>
 
     <NuxtImg
-      src="https://resources.jctrans.com/res/hzh/pc/img/logo_nor@2x.png"
+      src="https://erhang-cdn.imgix.net/logo.png?s=d81dd61f2201d3d91f2c2c2658d6ee0b"
     />
+
+    <h3>{{ $t('global.siteName') }}s</h3>
   </div>
 </template>
 

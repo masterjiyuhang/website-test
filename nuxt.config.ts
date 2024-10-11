@@ -22,6 +22,8 @@ export default defineNuxtConfig({
 
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
+
+    '@nuxtjs/i18n',
   ],
 
   eslint: {
@@ -87,5 +89,15 @@ export default defineNuxtConfig({
 
   pinia: {
     storesDirs: ['app/stores/**'],
+  },
+
+  i18n: {
+    locales: [
+      { code: 'en', file: 'en-US.json', name: 'English 🇺🇸' },
+      { code: 'cn', file: 'zh-CN.json', name: '中国 🇨🇳' },
+    ],
+    langDir: 'locales',
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
   },
 })
