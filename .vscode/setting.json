@@ -1,4 +1,9 @@
 {
   // Required in vscode-eslint < v3.0.10 only
-  "eslint.experimental.useFlatConfig": true
+  "eslint.experimental.useFlatConfig": true,
+  "i18n-ally.localesPaths": [
+    "app/locales",
+    "src/components/jctransFontApi/locale",
+    "src/components/jctransFontApi/locale/lang"
+  ]
 }

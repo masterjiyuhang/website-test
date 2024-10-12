@@ -12,18 +12,15 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxtjs/tailwindcss',
-    '@nuxt/icon',
-
-    '@nuxtjs/fontaine', // 优化 Web 字体加载
-    '@nuxtjs/critters', // 优化关键 CSS 加载
-
+    '@nuxt/icon', // 优化 Web 字体加载
+    '@nuxtjs/fontaine', // 优化关键 CSS 加载
+    '@nuxtjs/critters',
     '@nuxt/image',
     '@nuxtjs/seo',
-
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
-
     '@nuxtjs/i18n',
+    'nuxt-headlessui',
   ],
 
   eslint: {
@@ -99,5 +96,9 @@ export default defineNuxtConfig({
     langDir: 'locales',
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
+  },
+
+  headlessui: {
+    prefix: 'Headless',
   },
 })
