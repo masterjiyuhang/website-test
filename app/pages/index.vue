@@ -16,7 +16,7 @@
     </div>
     <Icon name="uil:github" style="color: black" />
 
-    <h1>count: {{ store.count }}</h1>
+    <h1 class="text-blue-400">count: {{ store.count }}</h1>
     <button class="border p-2" @click="store.increment">add count</button>
 
     <NuxtImg
