@@ -1,13 +1,14 @@
 <template>
   <div class="text-red-400">
     <NuxtLinkLocale href="/member">go to member page</NuxtLinkLocale>
+    <div class="bg-red-500 translate-x-9">must</div>
     <div class="py-16">
       <HeadlessSwitch
         v-model="enabled"
-        :class="enabled ? 'bg-teal-900' : 'bg-teal-700'"
+        :class="enabled ? 'bg-red-500' : 'bg-teal-700'"
         class="relative inline-flex h-[38px] w-[74px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
       >
-        <span class="sr-only">Use setting</span>
+        <span class="sr-only">Use setting{{ enabled }}</span>
         <span
           aria-hidden="true"
           :class="enabled ? 'translate-x-9' : 'translate-x-0'"
@@ -95,8 +96,6 @@
 </template>
 
 <script lang="ts" setup>
-  import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
-
   const store = useCounterStore()
 
   const enabled = ref(false)
