@@ -1,6 +1,8 @@
 <template>
   <div>
     <NuxtRouteAnnouncer />
+    <NuxtLoadingIndicator color="red" :duration="6000" :height="10" />
+    <NuxtRouteAnnouncer />
     <!-- <NuxtWelcome /> -->
     <NuxtLayout>
       <NuxtPage />

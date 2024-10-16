@@ -7,26 +7,31 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   app: {
-    baseURL: '/website-test',
-    buildAssetsDir: 'nuxt-assets',
+    // buildAssetsDir: 'nuxt-assets',
+    baseURL: '/website-test/',
+    head: {
+      title: '华裕',
+    },
   },
   site: {
+    name: 'Hah',
     url: 'https://masterjiyuhang.github.io/website-test/',
   },
   extends: ['./tailwindcss-layer'],
 
   modules: [
     '@nuxt/eslint',
-    '@nuxtjs/tailwindcss',
-    '@nuxt/icon', // 优化 Web 字体加载
-    '@nuxtjs/fontaine', // 优化关键 CSS 加载
+    '@nuxtjs/tailwindcss', // 优化 Web 字体加载
+    '@nuxt/icon', // 优化关键 CSS 加载
+    '@nuxtjs/fontaine',
     '@nuxtjs/critters',
     '@nuxt/image',
-    '@nuxtjs/seo',
+    // '@nuxtjs/seo',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     '@nuxtjs/i18n',
     'nuxt-headlessui',
+    '@nuxtjs/robots',
   ],
 
   eslint: {
