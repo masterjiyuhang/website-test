@@ -6,9 +6,12 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-
+  app: {
+    baseURL: process.env.NODE_ENV === 'production' ? '/nuxt3-generate/' : '/',
+    buildAssetsDir: '/static/',
+  },
   site: {
-    url: 'https://masterjiyuhang.github.io/',
+    url: 'https://masterjiyuhang.github.io/website-test/',
   },
   extends: ['./tailwindcss-layer'],
 
