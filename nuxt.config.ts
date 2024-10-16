@@ -7,8 +7,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/nuxt3-generate/' : '/',
-    buildAssetsDir: '/static/',
+    buildAssetsDir: 'assets',
   },
   site: {
     url: 'https://masterjiyuhang.github.io/website-test/',
