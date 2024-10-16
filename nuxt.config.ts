@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
+  site: {
+    url: 'https://masterjiyuhang.github.io/',
+  },
   extends: ['./tailwindcss-layer'],
 
   modules: [
