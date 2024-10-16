@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   app: {
-    buildAssetsDir: 'assets',
+    baseURL: '/website-test',
+    buildAssetsDir: 'nuxt-assets',
   },
   site: {
     url: 'https://masterjiyuhang.github.io/website-test/',
