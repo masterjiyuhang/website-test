@@ -58,22 +58,22 @@ jobs:
         if: ${{ steps.detect-package-manager.outputs.manager == 'pnpm' }}
         run: npm install -g pnpm
 
-      # - name: Setup Pages
-      #   uses: actions/configure-pages@v5
-      #   with:
-      #     static_site_generator: nuxt
-      #     token: ${{ secrets.NUXT_TOKEN }} # 使用自定义的 NUXT_TOKEN
-      #     enablement: true
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          static_site_generator: nuxt
+          token: ${{ secrets.NUXT_TOKEN }} # 使用自定义的 NUXT_TOKEN
+          enablement: true
 
-      # - name: Restore cache
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: |
-      #       dist
-      #       .nuxt
-      #     key: ${{ runner.os }}-nuxt-build-${{ hashFiles('pnpm-lock.yaml') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-nuxt-build-
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .output/public
+            .nuxt
+          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-nuxt-build-
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
